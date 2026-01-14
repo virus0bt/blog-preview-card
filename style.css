@@ -4,10 +4,6 @@
     url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
 }
 
-body {
-  font-family: "Figtree", sans-serif;
-}
-
 :root {
   /* Fonts */
 
@@ -23,6 +19,121 @@ body {
   --c-yellow: hsl(47, 88%, 63%);
   --c-gray-500: hsl(0, 0%, 42%);
   --c-gray-950: hsl(0, 0%, 7%);
+
+  --color-main-bg: var(--c-yellow);
+  --color-card-bg: var(--c-white);
+  --color-text-main: var(--c-gray-950);
+  --color-text-second: var(--c-gray-500);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-main-bg);
+  color: var(--color-text-main);
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+}
+
+.card__wrapper {
+  width: calc(100% - calc(48 / 16 * 1rem));
+  max-width: 327px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: var(--color-card-bg);
+  border-radius: 20px;
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+  /* gap: 12px; */
+}
+
+.card__item-image {
+  /* width: 279px;
+  height: 200px; */
+  /* border-radius: 10px; */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card__item-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-block: 24px;
+}
+
+.card__item-title {
+  font-size: var(--fs-20);
+  font-weight: 800;
+}
+
+.card__item-category {
+  display: inline;
+  font-size: var(--fs-12);
+  line-height: 1.5;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: var(--c-yellow);
+  order: -1;
+}
+
+.card__item-published {
+  font-size: var(--fs-12);
+  order: -1;
+}
+
+.card__item-datetime {
+}
+
+.card__item-description {
+  color: var(--color-text-second);
+}
+
+.card__item-author {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.card__item-author-image {
+  width: 32px;
+  height: 100%;
+}
+
+.card__item-author-name {
+  font-size: var(--fs-14);
+  font-weight: 800;
 }
 
 .attribution {
