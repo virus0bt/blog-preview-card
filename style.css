@@ -150,9 +150,6 @@ main {
   order: -1;
 }
 
-.card__item-datetime {
-}
-
 .card__item-description {
   font-size: clamp(0.875rem, 0.188vw + 0.83rem, 1rem);
   color: var(--color-text-second);
