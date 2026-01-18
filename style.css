@@ -177,4 +177,9 @@ main {
   font-size: var(--font-attribution);
   text-align: center;
   color: var(--color-attribution);
+
+  a {
+    text-decoration: underline;
+    font-weight: 800;
+  }
 }
